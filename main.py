@@ -50,6 +50,7 @@ def check_birthdays():
             "\n\na *HAPPY BIRTHDAY!!*\n🦊🥳🎉"
         # Telegram underscore parsing issue
         msg = msg.replace("_", "\\_")
+        send_message(PCT_CHAT, msg)
         send_message(SL_CHAT, msg)
 
 if __name__ == '__main__':

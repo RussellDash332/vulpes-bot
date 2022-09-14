@@ -21,4 +21,6 @@ MANIFEST
 *.manifest
 *.spec
 .ipynb_checkpoints
+
 env.py
+birthdays.tsv

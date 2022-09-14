@@ -3,7 +3,7 @@ name: Say Happy Birthday
 on:
   push:
     branches:
-      - main
+      - cron
   schedule:
     - cron: "55 0 * * *" # every 0:55 GMT
 

@@ -25,7 +25,7 @@ def send_message(chat_id, message):
     print(requests.get(f"https://api.telegram.org/bot{TOKEN}/sendMessage", params={
         "chat_id": chat_id,
         "parse_mode": "Markdown",
-        "text": emoji.emojize(message, use_aliases=True),
+        "text": emoji.emojize(message),
         "disable_web_page_preview": True,
     }).json())
 

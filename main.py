@@ -50,7 +50,7 @@ def check_birthdays():
 
     now = datetime.now()
     now = datetime(year=1900, month=now.month, day=now.day)
-    GRACE_DAYS = 20
+    GRACE_DAYS = 0
 
     df_bd = df[abs(df.Bday - now) <= timedelta(days=GRACE_DAYS)]
     if df_bd.shape[0]: # if there is someone inside
@@ -59,7 +59,7 @@ def check_birthdays():
             "\n\na *HAPPY BIRTHDAY!!*\n🦊🥳🎉"
         # Telegram underscore parsing issue
         msg = msg.replace("_", "\\_")
-        #send_message(PCT_CHAT, msg)
+        send_message(PCT_CHAT, msg)
         send_message(SL_CHAT, msg)
 
 def tsv_to_secret(fn, out_fn):
